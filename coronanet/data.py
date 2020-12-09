@@ -35,18 +35,13 @@ class Coronanet:
         # Use os.path library to construct path independent of Unix vs. Windows specificities
 
 
-if __name__ == '__main__':
-    # For introspections purpose to quickly get this functions on ipython
-    from coronanet.data import Coronanet
+##if __name__ == '__main__':
+#    # For introspections purpose to quickly get this functions on ipython
+#    from coronanet.data import Coronanet
     #import coronanet.data
-    coronanet_instance = Coronanet()
-    df = coronanet_instance.get_raw_data()
-    print(df.head())
-    '''
-    if df:
-        df.head()
-    else:
-        print("problem")
-    '''
+#    coronanet_instance = Coronanet()
+#    df = coronanet_instance.get_raw_data()
+#    print(df.head())
+
 
 
