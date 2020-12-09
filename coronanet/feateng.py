@@ -18,5 +18,6 @@ def t0_creation(df):
         if df.iloc[max_line-1,i]>=10:
             dico[df.columns[i]] = df.date[min(df.iloc[:,i][df.iloc[:,i]>=10])]
     df = df.append(dico,ignore_index=True)
+    tdeaths.iloc[318,0] = ''
     df.dropna(axis='columns', inplace=True)
     return df
