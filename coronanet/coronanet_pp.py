@@ -85,17 +85,17 @@ class Prepro_coronanet:
         df = self.missing_ISO(df)
         return df
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     #from coronanet.data import Coronanet
     #coronanet_instance = Coronanet()
     #df = coronanet_instance.get_raw_data()
     #print(df.head())
 
-    from coronanet.coronanet_pp import Prepro_coronanet
+    #from coronanet.coronanet_pp import Prepro_coronanet
 
     # prepro_instance.df is the raw_data
 
-    prepro_instance = Prepro_coronanet()
+    #prepro_instance = Prepro_coronanet()
     #print(prepro_instance.df.head())
 
     # Test tristans_columns method
@@ -125,8 +125,8 @@ if __name__ == '__main__':
 
     # test new_table function
     #df_select = prepro_instance.new_table(df)
-    df_select = prepro_instance.prepro_data()
-    print(df_select.head())
-    print(df_select.shape)
-    print(df_select['ISO_A3'].unique())
+    #df_select = prepro_instance.prepro_data()
+    #print(df_select.head())
+    #print(df_select.shape)
+    #print(df_select['ISO_A3'].unique())
 
