@@ -4,18 +4,23 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
+lma_data=pd.read_csv('https://raw.githubusercontent.com/TristanBOOK/coronanet/master/coronanet/data/LMA_Data_10_semaines_and_Pol_fam.csv')
+countries=lma_data.ID.unique()
+
+
+
 st.markdown("""
-    # Anti-Covid policy efficnecy
+    # Anti-Covid policy efficiency
     ## Will your next anti-covid policy help saving lives?
 """)
 
 st.write()
 #st.markdown("Hello World")
 
-countries=['FR','US','RU',]
 
 option = st.selectbox('Please selct a country ID',countries)
 
+numb_death_country=
 J_14=1000
 date='2020-10-01'
 
