@@ -107,8 +107,8 @@ past_14d_death_scaled=scaler(past_14d_death,p_14_min,p_14_max)
 #############################################
 #####Change path for model and template #####
 ############################################# ==>
-model = joblib.load('/Users/paulcharpentier/Desktop/Coronanet_files/XGboost_CORONANET.joblib')
-X_template=pd.read_csv('/Users/paulcharpentier/Desktop/Coronanet_files/mean_features.csv')
+model = joblib.load('../coronanet/data/XGboost_CORONANET.joblib')
+X_template=pd.read_csv('https://raw.githubusercontent.com/TristanBOOK/coronanet/master/coronanet/data/mean_features.csv')
 ### Model inputs
 X_input=X_template
 #X_input.iloc[0,:]=0
