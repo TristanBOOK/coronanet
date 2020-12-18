@@ -8,11 +8,13 @@ import joblib
 
 @st.cache(suppress_st_warning=True)
 def read_data():
-    zf1 = zipfile.ZipFile('../coronanet/data/cases_new_data.csv.zip')
-    cases_df = pd.read_csv(zf1.open('cases_new_data.csv'))
+    #zf1 = zipfile.ZipFile('../coronanet/data/cases_new_data.csv.zip')
+    #cases_df = pd.read_csv(zf1.open('cases_new_data.csv'))
+    cases_df = pd.read_csv('https://raw.githubusercontent.com/TristanBOOK/coronanet/master/coronanet/data/cases_new_data.csv')
     lma_data=pd.lma_data=pd.read_csv('https://raw.githubusercontent.com/TristanBOOK/coronanet/master/coronanet/data/LMA_Data_10_semaines_and_Pol_fam.csv')
-    zf2 = zipfile.ZipFile('../coronanet/data/policies_raw.csv.zip')
-    policies_df = pd.read_csv(zf2.open('policies_raw.csv'))
+    #zf2 = zipfile.ZipFile('../coronanet/data/policies_raw.csv.zip')
+    #policies_df = pd.read_csv(zf2.open('policies_raw.csv'))
+    policies_df = pd.read_csv('https://raw.githubusercontent.com/TristanBOOK/coronanet/master/coronanet/data/policies_raw.csv')
     countries_df = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19_Unified-Dataset/master/COVID-19_LUT.csv')
     country_dict = {}
     for i in range(countries_df.shape[0]):
