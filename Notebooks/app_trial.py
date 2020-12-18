@@ -5,6 +5,7 @@ import pandas as pd
 import zipfile
 import datetime
 import joblib
+import os
 
 @st.cache(suppress_st_warning=True)
 def read_data():
@@ -109,7 +110,11 @@ past_14d_death_scaled=scaler(past_14d_death,p_14_min,p_14_max)
 #############################################
 #####Change path for model and template #####
 ############################################# ==>
-model = joblib.load('../coronanet/data/XGboost_CORONANET.joblib')
+datapath = os.path.dirname(os.path.abspath(__file__))
+st.markdown(datapath)
+#model = joblib.load('../coronanet/data/XGboost_CORONANET.joblib')
+model=joblib.load(f'{datapath}/XGboost_CORONANET.joblib')
+
 X_template=pd.read_csv('https://raw.githubusercontent.com/TristanBOOK/coronanet/master/coronanet/data/mean_features.csv')
 ### Model inputs
 X_input=X_template
